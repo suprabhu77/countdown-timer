@@ -40,7 +40,7 @@ h1 {
     /* position: absolute; */
     left: 50%;
     top: 50%; 
-    margin-left: -80px;
+    margin-left: 5px;
     margin-top: 80px;
 }
 span{

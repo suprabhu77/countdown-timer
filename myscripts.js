@@ -1,21 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
-        <head> 
-            <script> 
-                //set minutes 
-                var mins = 0.1; 
-        
-                //calculate the seconds 
+var mins = 5 
                 var secs = mins * 60; 
-        
+                // console.log(secs)
+                // countdown();
+                
                 //countdown function is evoked when page is loaded 
                 function countdown() { 
+                    // console.log(2)
                     setTimeout('Decrement()', 60); 
-                } 
+
+
+                
+                }
         
                 //Decrement function decrement the value. 
                 function Decrement() { 
+
                     if (document.getElementById) { 
                         // console.log(1)
                         minutes = document.getElementById("minutes"); 
@@ -53,50 +52,23 @@
                             secs--; 
                             setTimeout('Decrement()', 1000); 
                         } 
+                            
                     } 
-                } 
-        
-                function getminutes() { 
-                    //minutes is seconds divided by 60, rounded down 
-                    mins = Math.floor(secs / 60); 
-                    return mins; 
-                } 
-        
-                function getseconds() { 
-                    //take minutes remaining (as seconds) away 
-                    //from total seconds remaining 
-                    return secs - Math.round(mins * 60); 
-                } 
-            </script> 
-            <link rel="stylesheet" href="style.css" />
-        </head> 
-        <!-- onload function is evoke when page is load --> 
-        <!--countdown function is called when page is loaded --> 
-        
-        <body onload="countdown();"> 
-            <div> 
+                    function getminutes() { 
+                                //minutes is seconds divided by 60, rounded down 
+                                mins = Math.floor(secs / 60); 
+                                return mins; 
+                            } 
+                    
+                     function getseconds() { 
+                                //take minutes remaining (as seconds) away 
+                                //from total seconds remaining 
+                                return secs - Math.round(mins * 60); 
+                        } 
+                    // sessionStorage.removeItem("min1");
+                }
                 
-                <center>
-                    <h1> TIMER </h1>
-                    <div class="countdown-container">
-                        <!-- <div class="countdown-el days-c">
-                            <p class="big-text" id="days">0</p>
-                            <span>days</span>
-                        </div> -->
-                        <div class="countdown-el hours-c">
-                            <p class="big-text" id="minutes"></p>
-                            <span>MINUTES</span>
-                        </div>
-                        <div class="countdown-el mins-c">
-                            <p class="big-text" id="seconds"></p>
-                            <span>SECONDS</span>
-                        </div>
-                        <!-- <div class="countdown-el seconds-c">
-                            <p class="big-text" id="seconds">0</p>
-                            <span>seconds</span>
-                        </div> -->
-                    </div> 
-                </center>
-        </body> 
+                
+                
         
-</html>
+                
