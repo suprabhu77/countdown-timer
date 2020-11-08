@@ -1,15 +1,12 @@
-var mins = 5 
+var mins = 5
                 var secs = mins * 60; 
                 // console.log(secs)
                 // countdown();
-                
+                const timeh = document.querySelector('h2')
                 //countdown function is evoked when page is loaded 
                 function countdown() { 
                     // console.log(2)
                     setTimeout('Decrement()', 60); 
-
-
-                
                 }
         
                 //Decrement function decrement the value. 
@@ -43,6 +40,7 @@ var mins = 5
                         //if seconds becomes zero, 
                         //then page alert time up 
                         if (mins < 0) { 
+                            timeh.innerHTML = 'TIMES UP'
                             alert('time up'); 
                             document.getElementById("minutes").innerHTML= 0;
                             document.getElementById("seconds").innerHTML= 0; 
